@@ -6,6 +6,13 @@
 
 		<div class="col-sm-10 col-sm-offset-1">
 
+		<div class="text-right">
+
+			<%= link_to "Crear Post", new_post_path, class: "btn btn-primary" %>
+			
+
+		</div>
+
 
 		<%  @posts.each do |post| %>
 
@@ -17,6 +24,9 @@
 
 
 		<% end %>
+
+
+
 
 
 		</div>
