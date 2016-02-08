@@ -2,11 +2,24 @@
 
 	<div class="row">
 
+		<h1>Lista de Posts </h1>
+
 		<div class="col-sm-10 col-sm-offset-1">
 
-			<h1>prueba </h1>
 
-		<div>
+		<%  @posts.each do |post| %>
+
+		<h2> <%= post.title %></h2>
+
+		<p>	<%= post.body %></p>
+
+
+
+
+		<% end %>
+
+
+		</div>
 		
 
 	</div>
