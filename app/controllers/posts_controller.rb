@@ -66,6 +66,19 @@ class PostsController < ApplicationController
 	end
 
 
+	def destroy
+
+		@post=Post.find(params[:id])
+
+		@post.destroy
+
+		redirect_to posts_path, notice: "El Post fue eliminado con Exito"
+
+		
+
+	end
+
+
 
 	private
 
