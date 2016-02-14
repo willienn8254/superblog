@@ -10,6 +10,7 @@
 		<%  @posts.each do |post| %>
 
 		<h2> <%= post.title %></h2>
+		<p> Creado por <%= post.user.email %></p>
 
 		<p>	<%= post.body %></p>
 
