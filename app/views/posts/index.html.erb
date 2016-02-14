@@ -10,8 +10,8 @@
 		<%  @posts.each do |post| %>
 
 		<h2> <%= post.title %></h2>
-		<span class="label label-default">Creador: <%= post.user.email %></span>
-		<span class="label label-default">Fecha: dia <%= post.created_at.day %> del mes <%= post.created_at.month %> del año <%= post.created_at.year %> </span>
+		<div><span class="label label-default">Creador: <%= post.user.email %></span></div>
+		<div><span class="label label-default">Fecha de Publicacion: <%= post.created_at.strftime('%A')%> <%= post.created_at.day %> <%= post.created_at.strftime('%B')%> <%= post.created_at.year %> </span></div>
 
 		<p>	<%= post.body %></p>
 
