@@ -14,8 +14,12 @@
 		<p>	<%= post.body %></p>
 
 		<%=link_to "Ver detalle",post, class: "btn btn-primary" %>
+
+		<% if signed_in? && post.user==current_user%>
+		
 		<%=link_to "Editar Post",edit_post_path(post), class: "btn btn-primary" %>
 		<%=link_to "Eliminar Post",post, method: :delete,data: { confirm: "¿Estás seguro de eliminar este producto?" }, class: "btn btn-primary" %>
+		<%end%>
 
 
 
