@@ -4,9 +4,13 @@
 		
 		<div class= "col-sm-6 col-sm-offset-3">
 
+			<%=link_to "Volver",posts_path %>
+			<br>
+
 			<h1><%= @post.title %></h1>
 			<br>
-			<p><%= @post.body %></p>
+			<p class="text-justify"><%= @post.body %></p>
+			
 			
 
 		</div>
