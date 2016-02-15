@@ -12,7 +12,7 @@
 		<div><span class="label label-default">Creador: <%= post.user.email %></span></div>
 		<div><span class="label label-default">Fecha de Publicacion: <%= post.created_at.strftime('%A')%> <%= post.created_at.day %> <%= post.created_at.strftime('%B')%> <%= post.created_at.year %> </span></div>
 
-		<p>	<%= post.body[0,250] %>..</p>
+		<p>	<%= markdown(post.body[0,250])%>..</p>
 
 		
 

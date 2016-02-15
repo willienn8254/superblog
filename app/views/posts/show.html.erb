@@ -9,7 +9,7 @@
 
 			<h1><%= @post.title %></h1>
 			<br>
-			<p class="text-justify"><%= @post.body %></p>
+			<p class="text-justify"><%= markdown(@post.body) %></p>
 			<br>
 			<h3>Comentarios:</h3>
 

@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 gem 'devise'
 
+gem 'redcarpet'
 
 
 gem 'coffee-script-source', '1.8.0' 
