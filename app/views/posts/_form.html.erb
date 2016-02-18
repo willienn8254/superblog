@@ -27,11 +27,11 @@
 		</div>
 
 		<div class="form-group">
-			<%= f.text_area :body, class: "form-control input-lg", placeholder: "Escribe el contenido de tu Post" %>
+			<%= f.text_area :body, :rows => 15, class: "form-control input-lg", placeholder: "Escribe el contenido de tu Post" %>
 		</div>
 
 		<div class="form-group">
-			<%= f.submit form_title, class: "form-control input-lg" %>
+			<%= f.submit form_title, class: "btn btn-primary btn-lg btn-block" %>
 		</div>
 
 
