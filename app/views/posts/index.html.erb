@@ -10,8 +10,7 @@
 
 		<h2> <%=link_to post.title, post %></h2>
 		<div><span class="label label-default">Creador: <%= post.user.email %></span></div>
-		<div><span class="label label-default">Fecha de Publicacion: <%= post.created_at.strftime('%A')%> <%= post.created_at.day %> <%= post.created_at.strftime('%B')%> <%= post.created_at.year %> </span></div>
-
+		<div><span class="label label-default">Fecha de Publicacion: <%= l post.created_at, format: "%d de %B de %Y"%></span></div>
 		<p>	<%= markdown(post.body[0,250])%>..</p>
 
 		
