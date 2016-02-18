@@ -11,15 +11,24 @@
 		<h2> <%=link_to post.title, post %></h2>
 		<div><span class="label label-default">Creador: <%= post.user.email %></span></div>
 		<div><span class="label label-default">Fecha de Publicacion: <%= l post.created_at, format: "%d de %B de %Y"%></span></div>
-		<p>	<%= markdown(post.body[0,250])%>..</p>
+		<p><%= markdown(post.body[0,250]  + " ...")%> </p>
+
 
 		
 
 		<% if signed_in? && post.user==current_user%>
-		<%=link_to "Editar Post",edit_post_path(post) %>
-		<%=link_to "Eliminar Post",post, method: :delete,data: { confirm: "¿Estás seguro de eliminar este producto?" }%>
-		<%end%>
 
+		<div>
+		<span class="glyphicon glyphicon-pencil"></span>
+		<%=link_to "Editar Post  ",edit_post_path(post) %>
+		</div>
+
+		<div>
+		<span class="glyphicon glyphicon-remove"></span>
+		<%=link_to "Eliminar Post",post, method: :delete,data: { confirm: "¿Estás seguro de eliminar este producto?" }%>
+		</div>
+		<%end%>
+		<hr>
 
 
 
